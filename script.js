@@ -13,15 +13,13 @@ function formatter(anime, desc){
 
 function baslik_degistir(baslik_adi){
 	var baslik = document.getElementById("titler");
-  add_to_box(baslik_adi);
 	baslik.innerHTML = baslik_adi;
-  console.log(baslik_adi);
+  add_to_box(baslik_adi);
 }
 
 function add_to_box(category){
-  var series = {"Savaş": [{"title": "Attack"}], "Aksiyon": [{"title": "Naruto"}]};
-  var main = document.getElementByID("box");
-  console.log(series)
+  var series = {"Savaş": [{"title": "Attack", "desc": "asdasdasd"}, {"title": "XFCE", "desc": "asdasdasd"}], "Aksiyon": [{"title": "Naruto", "desc": "asdasdasd"}, {"title": "Narutonun Çocuğu", "desc": "asdasdasd"}]};
+  var main = document.getElementById("box");
   for (x in series[category]) {
     console.log(x);
     main.innerHTML += formatter(x["title"], "");
