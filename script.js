@@ -1,37 +1,16 @@
-function id(id){
-var x = document.getElementById(id);
-return x;
-};
+var template = `
+	<article>
+		<header>
+			<h3> </h3>
+		</header>
+		<section>
+			<p></p>
+		</section>
+	</article>
+`
 
-function gizle(){
-macera.style.display = "none";
-aksiyon.style.display = "none";
-};
-
-var aksiyon = id("aksiyon");
-var macera = id("macera");
-
-function goster() {
-var turler = document.getElementById("turler");
-if (turler.value == "Aksiyon"){
-aksiyon.style.display = "block";
+function baslik_degistir(baslik_adi){
+	var baslik = document.getElementById("titler");
+	baslik.innerHTML = baslik_adi;
 }
-else {
-aksiyon.style.display = "none";
-};
-if(turler.value == "Macera"){
-macera.style.display = "block";
-};
-else{
-macera.style.display = "none";
-};
-};
-
-
-
-
-function kapat() {
-var turler = document.getElementById("turler");
-aksiyon.style.display = "none";
-
-};
+console.log(1)
